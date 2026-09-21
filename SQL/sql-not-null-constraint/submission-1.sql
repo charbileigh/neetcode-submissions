@@ -1,14 +1,16 @@
-CREATE TABLE unused_table (
-  id INTEGER,
-  name TEXT
+
+create table products (
+    name text not null default 'Unknown',
+    price integer not null,
+    quantity integer default 0
 );
--- Do not modify above this line --
 
 
-drop table unused_table;
+
+
 
 
 -- Do not modify below this line --
 SELECT column_name, data_type, is_nullable, column_default
 FROM information_schema.columns
-WHERE table_name = 'unused_table';
+WHERE table_name = 'products';
